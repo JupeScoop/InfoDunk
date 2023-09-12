@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NQYX3VBC2C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NQYX3VBC2C');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Result</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 20px;
+            font-family: "Arial", sans-serif;
+            background-color: #f3d2b3;
+            background-image: url('https://www.transparenttextures.com/patterns/bright-squares.png');
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #0099cc;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #0077aa;
+        }
+
+        .container {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>infoDunk</h1>
+        <h3>Selected Teams:</h3>
+        <p>Home Team: {{ team_abbreviation_a }}</p>
+        <p>Away Team: {{ team_abbreviation_b }}</p>
+        <h2>Simulation Result for Home Team</h2>
+        <p>The average game plus/minus based on your simulation is: {{ '%.2f'|format(result) }} points</p>
+        <p>% of win chance based on your simulation is: {{ '%.2f'|format(win_chance * 100) }}</p>
+        <h2>Histogram of Average Predictions</h2>
+        <div class="image-container">
+            <img src="data:image/png;base64,{{ img_data_2 }}" alt="Histogram" width="600" height="400">
+            <img src="data:image/png;base64,{{ img_data_3 }}" alt="Histogram" width="600" height="400">
+        </div>
+        <br>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
