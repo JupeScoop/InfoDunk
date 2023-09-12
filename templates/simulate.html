@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NQYX3VBC2C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NQYX3VBC2C');
+</script>
+    <title>Simulate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            font-family: "Arial", sans-serif;
+            background-color: #f3d2b3;
+            background-image: url('https://www.transparenttextures.com/patterns/bright-squares.png');
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+
+        .banner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background-color: #384a4f;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .basketball-banner {
+            width: 80px;
+            height: auto;
+        }
+
+        .left-banner {
+            transform: rotateY(180deg);
+        }
+
+        .form-container {
+            flex: 1;
+            width: 100%;
+            padding: 20px;
+            max-width: 500px;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #b51b46;
+        }
+
+        label {
+            color: #ff9900;
+        }
+
+        select, input[type="submit"] {
+            background-color: #0099cc;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        select:hover, input[type="submit"]:hover {
+            background-color: #0077aa;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .error-message {
+            color: #ff0000; /* Red color for error message */
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <iframe src="https://giphy.com/embed/3DrHrnC0JMotPiopno" width="240" height="240" frameBorder="0" class="giphy-embed" allowFullScreen style="pointer-events: none;"></iframe>
+        <h1>Simulate Data</h1>
+    </div>
+    <div class="form-container">
+        <form action="/simulation_result" method="post" id="simulate-form">
+            <label for="team_abbreviation_a">Home Team:</label>
+            <select id="team_abbreviation_a" name="team_abbreviation_a">
+                <option value="ATL">Atlanta Hawks</option>
+                <option value="BKN">Brooklyn Nets</option>
+                <option value="BOS">Boston Celtics</option>
+                <option value="CHA">Charlotte Hornets</option>
+                <option value="CHI">Chicago Bulls</option>
+                <option value="CLE">Cleveland Cavaliers</option>
+                <option value="DAL">Dallas Mavericks</option>
+                <option value="DEN">Denver Nuggets</option>
+                <option value="DET">Detroit Pistons</option>
+                <option value="GSW">Golden State Warriors</option>
+                <option value="HOU">Houston Rockets</option>
+                <option value="IND">Indiana Pacers</option>
+                <option value="LAC">Los Angeles Clippers</option>
+                <option value="LAL">Los Angeles Lakers</option>
+                <option value="MEM">Memphis Grizzlies</option>
+                <option value="MIA">Miami Heat</option>
+                <option value="MIL">Milwaukee Bucks</option>
+                <option value="MIN">Minnesota Timberwolves</option>
+                <option value="NOP">New Orleans Pelicans</option>
+                <option value="NYK">New York Knicks</option>
+                <option value="OKC">Oklahoma City Thunder</option>
+                <option value="ORL">Orlando Magic</option>
+                <option value="PHI">Philadelphia 76ers</option>
+                <option value="PHX">Phoenix Suns</option>
+                <option value="POR">Portland Trail Blazers</option>
+                <option value="SAC">Sacramento Kings</option>
+                <option value="SAS">San Antonio Spurs</option>
+                <option value="TOR">Toronto Raptors</option>
+                <option value="UTA">Utah Jazz</option>
+                <option value="WAS">Washington Wizards</option>
+            </select>
+            <label for="team_abbreviation_b">Away Team:</label>
+            <select id="team_abbreviation_b" name="team_abbreviation_b">
+                <option value="ATL">Atlanta Hawks</option>
+                <option value="BKN">Brooklyn Nets</option>
+                <option value="BOS">Boston Celtics</option>
+                <option value="CHA">Charlotte Hornets</option>
+                <option value="CHI">Chicago Bulls</option>
+                <option value="CLE">Cleveland Cavaliers</option>
+                <option value="DAL">Dallas Mavericks</option>
+                <option value="DEN">Denver Nuggets</option>
+                <option value="DET">Detroit Pistons</option>
+                <option value="GSW">Golden State Warriors</option>
+                <option value="HOU">Houston Rockets</option>
+                <option value="IND">Indiana Pacers</option>
+                <option value="LAC">Los Angeles Clippers</option>
+                <option value="LAL">Los Angeles Lakers</option>
+                <option value="MEM">Memphis Grizzlies</option>
+                <option value="MIA">Miami Heat</option>
+                <option value="MIL">Milwaukee Bucks</option>
+                <option value="MIN">Minnesota Timberwolves</option>
+                <option value="NOP">New Orleans Pelicans</option>
+                <option value="NYK">New York Knicks</option>
+                <option value="OKC">Oklahoma City Thunder</option>
+                <option value="ORL">Orlando Magic</option>
+                <option value="PHI">Philadelphia 76ers</option>
+                <option value="PHX">Phoenix Suns</option>
+                <option value="POR">Portland Trail Blazers</option>
+                <option value="SAC">Sacramento Kings</option>
+                <option value="SAS">San Antonio Spurs</option>
+                <option value="TOR">Toronto Raptors</option>
+                <option value="UTA">Utah Jazz</option>
+                <option value="WAS">Washington Wizards</option>
+            </select>
+            <br><br>
+            <div class="button-container">
+                <input type="submit" value="Simulate" id="simulate-button" disabled>
+                <!-- Error message element -->
+                <p class="error-message" id="error-message">Please select different teams for Home and Away.</p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const teamSelectA = document.getElementById("team_abbreviation_a");
+        const teamSelectB = document.getElementById("team_abbreviation_b");
+        const simulateButton = document.getElementById("simulate-button");
+        const errorMessage = document.getElementById("error-message");
+
+        // Function to check if both selected teams are the same
+        function checkTeams() {
+            if (teamSelectA.value === teamSelectB.value) {
+                simulateButton.disabled = true;
+                errorMessage.style.display = "block"; // Show error message
+            } else {
+                simulateButton.disabled = false;
+                errorMessage.style.display = "none"; // Hide error message
+            }
+        }
+
+        // Add event listeners to select elements to check teams when they change
+        teamSelectA.addEventListener("change", checkTeams);
+        teamSelectB.addEventListener("change", checkTeams);
+
+        // Initial check
+        checkTeams();
+    </script>
+</body>
+</html>
